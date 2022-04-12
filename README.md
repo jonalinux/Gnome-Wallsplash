@@ -14,7 +14,7 @@ Wallspash! it is written to work in Gnome environment, and it installs and works
 
 # Install
 
-1. Wallsplash needs notification-send! the first step is to check if the package is already installed, you can check by opening the terminal and typing $ notify-send "test" if the package is missing and you need to install it before continuing.
+1. Wallsplash needs notification-send! the first step is to check if the package is already installed, you can check by opening the terminal and typing $ notify-send "test" if the package is missing and you need to install it before continuing. Install wget for your distro.
 2. Allow the install.sh file to run as a program, then right-click and check the appropriate box under file properties.
 3. Enter the root password and choose the version that best suits your graphics resolution, including 1080p, 4k, 5k, 8k UHD.
 4. Start Wallsplash manually from the programs menu or use a cron job to automate the wallpaper change whenever you want.
