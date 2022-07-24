@@ -3,20 +3,19 @@
 
 ![Screenshot from 2022-07-24 20-42-00](https://user-images.githubusercontent.com/103053714/180663249-f1a95d70-8f40-4eb5-8137-41c94c497d9c.png)
 
-#Wallsplash #script #Gnome
 
-#Wallsplash.
+# Wallsplash.
 Random automatic wallpaper script from the net. Gnome 42.3
 
-##How does it work.
+## How does it work.
 Wallsplash installs in autostart and every 15 minutes will download a wallpaper. find the wallpaper to set as background in settings> appearance> background, all you have to do is select the background and every time it will be updated automatically.
 
-##Installation.
+## Installation.
 
 git clone https://github.com/JonathanSanfilippo/Gnome-Wallsplash.git
 cd Gnome-Wallsplash
 chmod + x ./install.sh
 ./install.sh
 
-##Dependencies.
+## Dependencies.
 wget
