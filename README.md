@@ -1,6 +1,7 @@
 
 ![logowall!](https://user-images.githubusercontent.com/87201918/150200907-a0cff2c1-16d5-4192-8610-bfb0a733ea7d.png)
-![Screenshot from 2022-07-24 20-41-22](https://user-images.githubusercontent.com/103053714/180663220-a9acf333-77ef-48bf-b439-4eb204c7148e.png)
+
+![Screenshot from 2022-07-24 20-42-00](https://user-images.githubusercontent.com/103053714/180663249-f1a95d70-8f40-4eb5-8137-41c94c497d9c.png)
 
 
 How does it work.
