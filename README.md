@@ -12,10 +12,10 @@ Wallsplash installs in autostart and every 15 minutes will download a wallpaper.
 
 ## Installation.
 
-git clone https://github.com/JonathanSanfilippo/Gnome-Wallsplash.git
-cd Gnome-Wallsplash
-chmod + x ./install.sh
-./install.sh
+- git clone https://github.com/JonathanSanfilippo/Gnome-Wallsplash.git
+- cd Gnome-Wallsplash
+- chmod + x ./install.sh
+- ./install.sh
 
 ## Dependencies.
 wget
