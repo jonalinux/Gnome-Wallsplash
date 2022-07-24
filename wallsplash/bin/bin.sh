@@ -5,33 +5,29 @@
 # Copyright (C) 2022 Jonathan Sanfilippo <jonathansanfilippo.uk@gmail.com>
 #gsettings set org.gnome.desktop.background picture-uri file:///
 
-GENERATESERIAL=$((1 + RANDOM % 10000))
-FIX=$((1 + RANDOM % 7200))
+while  true;  do 
+GENERATESERIAL=$((1 + RANDOM % 8000)); 
 URL=$(cat ~/.local/share/wallsplash/data/url)
 RESOLUTION=$(cat ~/.local/share/wallsplash/data/resolution)
 SERIAL=$(cat ~/.local/share/wallsplash/data/random)
+FILE="~/.local/share/wallsplash/data/image.jpg "
+IMAGE=$( wget -O ~/.local/share/wallsplash/data/image.jpg  "$URL""$RESOLUTION"-"$SERIAL"".jpg");
+MINSIZE=100
+SIZE=$(wc -c <"$FILE")
 
+get_w() { echo "$GENERATESERIAL" > ~/.local/share/wallsplash/data/random;
+$IMAGE;
+if [ $SIZE -ge $MINSIZE ]; then
+cp -r  ~/.local/share/wallsplash/data/image.jpg   ~/.local/share/backgrounds/wallsplash/image.jpg 
+      else
+    echo "$GENERATESERIAL" > ~/.local/share/wallsplash/data/random;
+    $IMAGE;
+    cp -r  ~/.local/share/wallsplash/data/image.jpg   ~/.local/share/backgrounds/wallsplash/image.jpg 
+    fi
+    }
 
-get_img () { IMAGE=$( wget -O ~/.local/share/wallsplash/data/image.jpg  "$URL""$RESOLUTION"-"$SERIAL"".jpg"); }
-
-while true; do
-get_img
-echo "$GENERATESERIAL" > ~/.local/share/wallsplash/data/random;
-$IMAGE
-
-file=~/.local/share/wallsplash/data/image.jpg 
-minimumsize=100
-actualsize=$(wc -c <"$file")
-if [ $actualsize -ge $minimumsize ]; then
-       cp -r  ~/.local/share/wallsplash/data/image.jpg   ~/.local/share/backgrounds/wallsplash/image.jpg 
-      
-else
-    echo "$FIX" > ~/.local/share/wallsplash/data/random;
-     $IMAGE;
-     cp -r  ~/.local/share/wallsplash/data/image.jpg    ~/.local/share/backgrounds/wallsplash/image.jpg
-    
-fi
-
-sleep 900
-get_img
+get_w
+ sleep 900
 done
+
+
