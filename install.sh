@@ -9,6 +9,12 @@ echo ""
 echo "Install Wallsplash!"
 echo ""
 
+mkdir -p ~/local/share/backgrounds
+mkdir -p ~/.local/share/backgrounds/wallsplash/
+mkdir -p ~/.config/autostart/
+mkdir -p ~/.local/share/gnome-background-properties/
+
+
 if ! [ -x "$(command -v wget)" ]; then
   echo -e ${On_Red}Error: wget is not installed.${Color_Off} >&2
   echo -e ${UBlue}install wget..${Color_Off}
@@ -33,7 +39,7 @@ Exec=/home/$USER/.local/share/wallsplash/bin/bin.sh
 Type=Application
 Categories=GTK;GNOME;System;" > wallsplash.desktop
 
-cp -r  wallsplash.desktop ~/.local/share/applications/
+#cp -r  wallsplash.desktop ~/.local/share/applications/
 cp -r  wallsplash.desktop ~/.config/autostart/
 
 #create xml
@@ -41,16 +47,17 @@ echo '<?xml version="1.0"?>
 <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
 <wallpapers>
   <wallpaper deleted="false">
-    <name>Default Background</name>
+    <name>Wallsplash</name>
     <filename>/home/'$USER'/.local/share/backgrounds/wallsplash/image.jpg</filename>
     <options>zoom</options>
     <shade_type>solid</shade_type>
     <pcolor>#3465a4</pcolor>
     <scolor>#000000</scolor>
+    <artist>4kwallpapers</artist>
   </wallpaper>
 </wallpapers>' >  ~/.local/share/gnome-background-properties/wallsplash.xml
+sudo cp -r  ~/.local/share/gnome-background-properties/wallsplash.xml /user/share/cinnamon-background-properties
 
-mkdir -p   ~/.local/share/backgrounds/wallsplash/
 
 #set your screen resolution
 echo "set your screen resolution"
