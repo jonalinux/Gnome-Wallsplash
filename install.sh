@@ -9,7 +9,7 @@ echo ""
 echo "Install Wallsplash!"
 echo ""
 
-mkdir -p ~/local/share/backgrounds
+mkdir -p ~/.local/share/backgrounds
 mkdir -p ~/.local/share/backgrounds/wallsplash/
 mkdir -p ~/.config/autostart/
 mkdir -p ~/.local/share/gnome-background-properties/
