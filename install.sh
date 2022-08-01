@@ -13,6 +13,7 @@ mkdir -p ~/.local/share/backgrounds
 mkdir -p ~/.local/share/backgrounds/wallsplash/
 mkdir -p ~/.config/autostart/
 mkdir -p ~/.local/share/gnome-background-properties/
+sudo mkdir -p /user/share/cinnamon-background-properties
 
 
 if ! [ -x "$(command -v wget)" ]; then
